@@ -7,7 +7,7 @@ import { AiOutlineLoading3Quarters } from 'react-icons/ai'; // Import loader ico
 import { BASE_URL } from '../baseurl';
 import Videowatch from './videowatch';
 import Relatedvideowatch from "./relatedvideowatch";
-import axios from 'axios';
+// import axios from 'axios';
 
 const Alldata = ({ extractyoutubedata, loadder, setYoutubeurl }) => {
   const [showvideomodal, setShowvideomodal] = useState(false);
@@ -16,7 +16,7 @@ const Alldata = ({ extractyoutubedata, loadder, setYoutubeurl }) => {
   const [idsetvideourl, setIdsetvideourl] = useState();
   const [currentView, setCurrentView] = useState('download_videos');
   const [downloadStatus, setDownloadStatus] = useState({}); // State for download status
-  const [lodderimg, setLodderimg] = useState(false)
+  // const [lodderimg, setLodderimg] = useState(false)
   const [loadingThumbnail, setLoadingThumbnail] = useState({}); // State to manage loading for each thumbnail
 
 
