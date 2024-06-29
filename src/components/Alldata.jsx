@@ -181,9 +181,9 @@ const Alldata = ({ extractyoutubedata, loadder, setYoutubeurl }) => {
   return (
     <>
       <div className='w-full h-auto  p-4 flex justify-center gap-4 items-center'>
-        <button onClick={() => setCurrentView('download_videos')} className={`w-[150px] h-[35px] text-sm ${currentView === 'download_videos' ? 'bg-[#afeade]' : 'bg-[#95D2B3]'} rounded-md`}>Download_videos</button>
-        <button onClick={() => setCurrentView('thumbnails')} className={`w-[150px] h-[35px] text-sm ${currentView === 'thumbnails' ? 'bg-[#afeade]' : 'bg-[#95D2B3]'} rounded-md`}>Thumbnails</button>
-        <button onClick={() => setCurrentView('related_videos')} className={`w-[150px] h-[35px] text-sm ${currentView === 'related_videos' ? 'bg-[#afeade]' : 'bg-[#95D2B3]'} rounded-md`}>Related Videos</button>
+        <button onClick={() => setCurrentView('download_videos')} className={`w-[155px] h-[35px] text-sm  ${currentView === 'download_videos' ? 'bg-[#afeade]' : 'bg-[#95D2B3]'} rounded-md`}>Download_videos</button>
+        <button onClick={() => setCurrentView('thumbnails')} className={`w-[155px] h-[35px] text-sm ${currentView === 'thumbnails' ? 'bg-[#afeade]' : 'bg-[#95D2B3]'} rounded-md`}>Thumbnails</button>
+        <button onClick={() => setCurrentView('related_videos')} className={`w-[155px] h-[35px] text-sm ${currentView === 'related_videos' ? 'bg-[#afeade]' : 'bg-[#95D2B3]'} rounded-md`}>Related Videos</button>
       </div>
 
       <div className='w-full h-[100vh]  p-4 videosalign'>
