@@ -6,7 +6,7 @@ const Hero = ({ setYoutubeurl, videoDetails, youtubeurl }) => {
     const [errorMessage, setErrorMessage] = useState('')
 
     const isValidYoutubeVideoUrl = (url) => {
-        const pattern = /^(https?:\/\/)?(www\.)?(youtube\.com\/(watch\?v=|embed\/|shorts\/)|youtu\.be\/)[\w-]{11}(?:&.*)?$/;
+        const pattern = /^(https?:\/\/)?(www\.)?(youtube\.com\/(watch\?v=|embed\/|shorts\/)|youtu\.be\/)[\w-]{11}(\?[\w=&-]*)?$/;
         return pattern.test(url);
     };
     const downloadvideos = () => {
