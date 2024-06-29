@@ -8,21 +8,14 @@ const Home = () => {
     const [videoDetails, setVideoDetails] = useState([]);
     const [loadder, setLoader] = useState(false);
     const [youtubeurl, setYoutubeurl] = useState(
-        "https://www.youtube.com/watch?v=iSNoJk5nt3c"
+        ""
     );
-    const [errorMessage, setErrorMessage] = useState('')
-    const isValidYoutubeVideoUrl = (url) => {
-        const pattern = /^(https?:\/\/)?(www\.)?(youtube\.com\/(watch\?v=|embed\/)|youtu\.be\/)[\w-]{11}(?:&.*)?$/;
-        return pattern.test(url);
-    };
+    //https://www.youtube.com/watch?v=iSNoJk5nt3c
+
+  
 
     useEffect(() => {
-        if (!isValidYoutubeVideoUrl(youtubeurl)) {
-            setErrorMessage("Invalid URL");
-            return;
-        } else {
-            setErrorMessage('')
-        }
+       
 
         setLoader(true);
         fetch(`${BASE_URL}info?url=${youtubeurl}`)
@@ -44,7 +37,7 @@ const Home = () => {
     return (
         <>
             <Nav />
-            <Hero setYoutubeurl={setYoutubeurl} videoDetails={videoDetails} youtubeurl={youtubeurl} errorMessage={errorMessage} />
+            <Hero setYoutubeurl={setYoutubeurl} videoDetails={videoDetails} youtubeurl={youtubeurl}  />
             <Alldata extractyoutubedata={extractyoutubedata} loadder={loadder} setYoutubeurl={setYoutubeurl} />
         </>
     )

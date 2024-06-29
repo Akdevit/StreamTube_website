@@ -8,21 +8,12 @@ const Playlist = () => {
     const [playlistdata, setPlaylistdata] = useState([]);
     const [playlistdetails, setPlaylistdetails] = useState({});
     const [lodder, setLodder] = useState(false);
-    const [playlisturl, setPlaylisturl] = useState('https://www.youtube.com/playlist?list=PL8p2I9GklV44sj_Ikp8jQSvwD-m9htnHT');
-    const [errorplaylisturl, setErrorplaylisturl] = useState('')
-    const validateYouTubeUrl = (url) => {
-        const regex = /^https:\/\/www\.youtube\.com\/playlist\?list=/;
-        return regex.test(url);
-    };
-
+    const [playlisturl, setPlaylisturl] = useState('');//https://www.youtube.com/playlist?list=PL8p2I9GklV44sj_Ikp8jQSvwD-m9htnHT
+   
+  
     useEffect(() => {
         const fetchPlaylist = async () => {
-            if (!validateYouTubeUrl(playlisturl)) {
-                setErrorplaylisturl("Invalid URL");
-                return;
-            } else {
-                setErrorplaylisturl('')
-            }
+           
 
             setLodder(true);
             try {
@@ -46,7 +37,7 @@ const Playlist = () => {
     return (
         <>
             <Nav />
-            <PlaylistHero playlistdetails={playlistdetails} setPlaylisturl={setPlaylisturl} errorplaylisturl={errorplaylisturl}/>
+            <PlaylistHero playlistdetails={playlistdetails} setPlaylisturl={setPlaylisturl} />
             <Playlistdata playlistdata={playlistdata} lodder={lodder} playlistdetails={playlistdetails} />
         </>
     );

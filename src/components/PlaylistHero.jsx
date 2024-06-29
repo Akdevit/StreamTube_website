@@ -1,13 +1,24 @@
 import React, { useState } from 'react'
 
 
-const Hero = ({ playlistdetails, setPlaylisturl, errorplaylisturl }) => {
+const Hero = ({ playlistdetails, setPlaylisturl }) => {
     const [inputurl, setInputurl] = useState('')
+    const [errorplaylisturl, setErrorplaylisturl] = useState('')
     //   console.log('playlistdata title',playlistdata.description)
     //setPlaylisturl
+    const validateYouTubeUrl = (url) => {
+        const regex = /^https:\/\/www\.youtube\.com\/playlist\?list=/;
+        return regex.test(url);
+    };
 
     const updateplaylist = () => {
         setPlaylisturl(inputurl)
+        if (!validateYouTubeUrl(inputurl)) {
+            setErrorplaylisturl("Invalid URL");
+            return;
+        } else {
+            setErrorplaylisturl('')
+        }
     }
 
     return (

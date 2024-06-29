@@ -1,12 +1,22 @@
 import React, { useState } from 'react'
 
 
-const Hero = ({ setYoutubeurl, videoDetails, youtubeurl, errorMessage }) => {
+const Hero = ({ setYoutubeurl, videoDetails, youtubeurl }) => {
     const [urlinput, setUrlinput] = useState('')
+    const [errorMessage, setErrorMessage] = useState('')
 
-
+    const isValidYoutubeVideoUrl = (url) => {
+        const pattern = /^(https?:\/\/)?(www\.)?(youtube\.com\/(watch\?v=|embed\/)|youtu\.be\/)[\w-]{11}(?:&.*)?$/;
+        return pattern.test(url);
+    };
     const downloadvideos = () => {
         setYoutubeurl(urlinput)
+        if (!isValidYoutubeVideoUrl(urlinput)) {
+            setErrorMessage("Invalid URL");
+            return;
+        } else {
+            setErrorMessage('')
+        }
     }
     return (
         <>
