@@ -6,7 +6,7 @@ const Hero = ({ setYoutubeurl, videoDetails, youtubeurl }) => {
     const [errorMessage, setErrorMessage] = useState('')
 
     const isValidYoutubeVideoUrl = (url) => {
-        const pattern = /^(https?:\/\/)?(www\.)?(youtube\.com\/(watch\?v=|embed\/)|youtu\.be\/)[\w-]{11}(?:&.*)?$/;
+        const pattern = /^(https?:\/\/)?(www\.)?(youtube\.com\/(watch\?v=|embed\/|shorts\/)|youtu\.be\/)[\w-]{11}(?:&.*)?$/;
         return pattern.test(url);
     };
     const downloadvideos = () => {
@@ -22,7 +22,7 @@ const Hero = ({ setYoutubeurl, videoDetails, youtubeurl }) => {
         <>
             <div className='w-full xl:h-[400px]  h-auto pt-8 pb-8 bg-[#E0FBE2] flex flex-col gap-11 justify-center items-center' >
                 <div className='xl:w-[60%] w-[90%] h-auto font-sans'>
-                    <h1 className='xl:text-3xl text-2xl text-center'> The Ultimate Hub for Youtube Video Downloads</h1>
+                    <h1 className='xl:text-3xl text-2xl text-center'> The Ultimate Hub for Youtube Video & Shorts Downloads</h1>
                 </div>
 
                 <div className='xl:w-[50%] w-[90%] h-auto bg-white p-1 rounded-sm flex justify-between gap-2'>
