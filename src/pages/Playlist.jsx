@@ -13,8 +13,6 @@ const Playlist = () => {
   
     useEffect(() => {
         const fetchPlaylist = async () => {
-           
-
             setLodder(true);
             try {
                 const response = await fetch(`${BASE_URL}playlist?url=${playlisturl}`);

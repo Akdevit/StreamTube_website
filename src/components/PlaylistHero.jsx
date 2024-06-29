@@ -7,7 +7,7 @@ const Hero = ({ playlistdetails, setPlaylisturl }) => {
     //   console.log('playlistdata title',playlistdata.description)
     //setPlaylisturl
     const validateYouTubeUrl = (url) => {
-        const regex = /^https:\/\/www\.youtube\.com\/playlist\?list=/;
+        const regex = /^(https?:\/\/)?(www\.)?(youtube\.com\/playlist\?list=)[\w-]+(&[\w-]+=[\w-]*)*$/;
         return regex.test(url);
     };
 
