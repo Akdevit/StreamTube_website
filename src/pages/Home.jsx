@@ -21,7 +21,7 @@ const Home = () => {
         fetch(`${BASE_URL}info?url=${youtubeurl}`)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
+                // console.log(data);
                 setExtractyoutubedata(data);
                 setVideoDetails(data?.videoDetails);
                 setLoader(false);

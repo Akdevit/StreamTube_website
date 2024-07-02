@@ -15,7 +15,7 @@ const VideoWatch = ({ idsetvideourl, setIdmodal }) => {
     return (
         <>
             <div className='w-full h-[100vh] flex justify-center items-center bg-[#00000049] fixed top-0 z-50' onClick={() => setIdmodal(false)}>
-                <div className='w-[50%] h-[60%] bg-white rounded-md p-4 relative'>
+                <div className='xl:w-[50%] xl:h-[60%] lg:w-[50%] lg:h-[60%] md:w-[80%] md:h-[60%] sm:w-[80%] sm:h-[60%] w-[95%] h-[50%] bg-white rounded-md p-4 relative'>
                     {loading && <div className='absolute inset-0 flex justify-center items-center bg-white z-10'>
                         <div className='loader'><AiOutlineLoading3Quarters className='animate-spin text-2xl' /></div> {/* Add your loading spinner here */}
                     </div>}

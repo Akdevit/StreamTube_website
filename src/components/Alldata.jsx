@@ -20,8 +20,8 @@ const Alldata = ({ extractyoutubedata, loadder, setYoutubeurl }) => {
   const [loadingThumbnail, setLoadingThumbnail] = useState({}); // State to manage loading for each thumbnail
 
 
-  console.log("extractyoutubedata", extractyoutubedata.formats);
-  console.log("data", extractyoutubedata);
+  // console.log("extractyoutubedata", extractyoutubedata.formats);
+  // console.log("data", extractyoutubedata);
 
   const thumb = extractyoutubedata?.videoDetails?.thumbnails[4];
   const thumbsecond = extractyoutubedata?.videoDetails?.thumbnails[3];
